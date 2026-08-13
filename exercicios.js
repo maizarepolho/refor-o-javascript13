@@ -19,8 +19,14 @@
 // Crie 2 variáveis com números e mostre no console
 // o resultado da soma, subtração, multiplicação e divisão.
 // ------------------------------------------------------------
+// EXERCÍCIO 1 - Calculadora simples
+let numero1 = 10;
+let numero2 = 5;
 
-
+console.log("Soma:", numero1 + numero2);
+console.log("Subtração:", numero1 - numero2);
+console.log("Multiplicação:", numero1 * numero2);
+console.log("Divisão:", numero1 / numero2);
 
 
 // EXERCÍCIO 2 - Conversor de temperatura
@@ -28,8 +34,11 @@
 // Converta para Fahrenheit e mostre no console.
 // Fórmula: F = C * 9/5 + 32
 // ------------------------------------------------------------
+let celsius = 25;
 
+let fahrenheit = celsius * 9 / 5 + 32;
 
+console.log("Temperatura em Fahrenheit:", fahrenheit);
 
 
 // EXERCÍCIO 3 - Par ou ímpar
@@ -38,9 +47,13 @@
 // Dica: use o operador % (resto da divisão)
 // Se numero % 2 === 0, é par.
 // ------------------------------------------------------------
+let numero = 7;
 
-
-
+if (numero % 2 === 0) {
+    console.log("O número é par.");
+} else {
+    console.log("O número é ímpar.");
+}
 
 // EXERCÍCIO 4 - Média de notas
 // Crie 3 variáveis com notas (de 0 a 10).
@@ -48,8 +61,6 @@
 // Se a média for >= 7, mostre "Aprovado".
 // Se não, mostre "Reprovado".
 // ------------------------------------------------------------
-
-
 
 
 // ============================================================
