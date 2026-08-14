@@ -61,6 +61,18 @@ if (numero % 2 === 0) {
 // Se a média for >= 7, mostre "Aprovado".
 // Se não, mostre "Reprovado".
 // ------------------------------------------------------------
+let nota1 = 10
+let nota2 = 7
+let nota3 = 6
+let resultado = (nota1 + nota2 + nota3)/3
+
+if(resultado >=7){
+    console.log("aprovado")
+}else{
+    console.log("reprovado")
+        
+}
+
 
 
 // ============================================================
@@ -73,8 +85,13 @@ if (numero % 2 === 0) {
 // Se for >= 18, mostre "Maior de idade".
 // Se não, mostre "Menor de idade".
 // ------------------------------------------------------------
+let idade = 20;
 
-
+if (idade >= 18) {
+    console.log("Maior de idade");
+} else {
+    console.log("Menor de idade");
+}
 
 
 // EXERCÍCIO 6 - Calculadora de IMC
@@ -86,7 +103,22 @@ if (numero % 2 === 0) {
 //   25 até 29.9    = "Sobrepeso"
 //   30 ou mais     = "Obesidade"
 // ------------------------------------------------------------
+let peso = 70;
+let altura = 1.75;
 
+let imc = peso / (altura * altura);
+
+console.log("IMC:", imc);
+
+if (imc < 18.5) {
+    console.log("Abaixo do peso");
+} else if (imc < 25) {
+    console.log("Peso normal");
+} else if (imc < 30) {
+    console.log("Sobrepeso");
+} else {
+    console.log("Obesidade");
+}
 
 
 
@@ -98,7 +130,25 @@ if (numero % 2 === 0) {
 //   let computador = opcoes[Math.floor(Math.random() * 3)]
 // Compare as jogadas e mostre quem ganhou.
 // ------------------------------------------------------------
+let jogada = "pedra";
 
+let opcoes = ["pedra", "papel", "tesoura"];
+let computador = opcoes[Math.floor(Math.random() * 3)];
+
+console.log("Você:", jogada);
+console.log("Computador:", computador);
+
+if (jogada === computador) {
+    console.log("Empate!");
+} else if (
+    (jogada === "pedra" && computador === "tesoura") ||
+    (jogada === "papel" && computador === "pedra") ||
+    (jogada === "tesoura" && computador === "papel")
+) {
+    console.log("Você ganhou!");
+} else {
+    console.log("Computador ganhou!");
+}
 
 
 
@@ -111,7 +161,19 @@ if (numero % 2 === 0) {
 //   4 e 3    = "D"
 //   2, 1, 0  = "F"
 // ------------------------------------------------------------
+let nota = 8;
 
+if (nota === 10 || nota === 9) {
+    console.log("A");
+} else if (nota === 8 || nota === 7) {
+    console.log("B");
+} else if (nota === 6 || nota === 5) {
+    console.log("C");
+} else if (nota === 4 || nota === 3) {
+    console.log("D");
+} else {
+    console.log("F");
+}
 
 
 
@@ -128,7 +190,11 @@ if (numero % 2 === 0) {
 //   "5 x 2 = 10"
 //   ... até "5 x 10 = 50"
 // ------------------------------------------------------------
+let n1 = 5;
 
+for (let i = 1; i <= 10; i++) {
+    console.log(n1 + " x " + i + " = " + (n1 * i));
+}
 
 
 
