@@ -61,15 +61,16 @@ if (numero % 2 === 0) {
 // Se a média for >= 7, mostre "Aprovado".
 // Se não, mostre "Reprovado".
 // ------------------------------------------------------------
-let nota1 = 10
-let nota2 = 7
-let nota3 = 6
-let resultado = (nota1 + nota2 + nota3)/3
+let nota1 = 10;
+let nota2 = 7;
+let nota3 = 6;
+
+let resultado = (nota1 + nota2 + nota3)/3;
 
 if(resultado >=7){
-    console.log("aprovado")
+    console.log("aprovado");
 }else{
-    console.log("reprovado")
+    console.log("reprovado");
         
 }
 
@@ -203,8 +204,10 @@ for (let i = 1; i <= 10; i++) {
 // Mostre cada número no console.
 // No final, mostre "Feliz Ano Novo!" (ou qualquer mensagem).
 // ------------------------------------------------------------
-
-
+for(let i = 10; i >= 0; i--){
+    console.log(i)
+}
+console.log("Feliz dia do amigo");
 
 
 // EXERCÍCIO 11 - Somar números
@@ -213,8 +216,13 @@ for (let i = 1; i <= 10; i++) {
 // Mostre o resultado no console.
 // Exemplo: se N = 5, resultado = 1+2+3+4+5 = 15
 // ------------------------------------------------------------
+let N = 12;
+let resul = 0;
+for(let i = 1; i <= N; i++){
+    resul = resul + i;
 
-
+}
+console.log(resul);
 
 
 // EXERCÍCIO 12 - Adivinhe o número
