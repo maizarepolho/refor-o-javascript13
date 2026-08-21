@@ -248,7 +248,11 @@ console.log(resul);
 // Chame a função e mostre o resultado no console.
 // Exemplo: saudacao("Maria") retorna "Olá, Maria!"
 // ------------------------------------------------------------
+function saudacao(nome) {
+    return "Olá, " + nome + "!";
+}
 
+console.log(saudacao("Maria"));
 
 
 
@@ -259,7 +263,22 @@ console.log(resul);
 // Dica: use um for de 2 até numero-1 e verifique se
 // algum divide o número sem resto (numero % i === 0).
 // ------------------------------------------------------------
+function ehPrimo(numero) {
+    if (numero < 2) {
+        return false;
+    }
 
+    for (let i = 2; i < numero; i++) {
+        if (numero % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(ehPrimo(7)); // true
+console.log(ehPrimo(10)); // false
 
 
 
@@ -269,9 +288,12 @@ console.log(resul);
 // Exemplo: inverter("javascript") retorna "tpircsavaj"
 // Dica: use split('') para virar array, reverse() para
 // inverter, e join('') para voltar a ser string.
-// ------------------------------------------------------------
+// ------------------------------------------------------------//
+function inverter(texto) {
+    return texto.split("").reverse().join("");
+}
 
-
+console.log(inverter("javascript")); // tpircsavaj
 
 
 // EXERCÍCIO 16 - Contar vogais
@@ -281,7 +303,27 @@ console.log(resul);
 // Dica: transforme em minúscula com .toLowerCase()
 // e verifique cada letra com um for.
 // ------------------------------------------------------------
+function contarVogais(palavra) {
+    palavra = palavra.toLowerCase();
 
+    let contador = 0;
+
+    for (let i = 0; i < palavra.length; i++) {
+        if (
+            palavra[i] === "a" ||
+            palavra[i] === "e" ||
+            palavra[i] === "i" ||
+            palavra[i] === "o" ||
+            palavra[i] === "u"
+        ) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+console.log(contarVogais("javascript")); // 3
 
 
 
@@ -296,9 +338,19 @@ console.log(resul);
 // Mostre a lista no console.
 // Remova o último item com pop() e mostre a lista novamente.
 // ------------------------------------------------------------
+let listaDeCompras = [];
 
+listaDeCompras.push("batata");
+listaDeCompras.push("tomate");
+listaDeCompras.push("kiwi");
+listaDeCompras.push("banana");
+listaDeCompras.push("acerola");
 
+console.log(listaDeCompras);
 
+listaDeCompras.pop();
+
+console.log(listaDeCompras);
 
 // EXERCÍCIO 18 - Maior e menor
 // Crie um array com 8 números diferentes.
@@ -307,7 +359,13 @@ console.log(resul);
 // Dica: use Math.max(...array) e Math.min(...array)
 // Ou tente fazer com um for (mais desafiador!).
 // ------------------------------------------------------------
+let numeros = [15, 8, 32, 4, 27, 19, 6, 41];
 
+let maior = Math.max(...numeros);
+let menor = Math.min(...numeros);
+
+console.log("Maior número:", maior);
+console.log("Menor número:", menor);
 
 
 
@@ -317,7 +375,15 @@ console.log(resul);
 // Depois ordene ao contrário (Z até A) e mostre também.
 // Dica: use .sort() e .reverse()
 // ------------------------------------------------------------
+let nomes = ["Carlos", "Ana", "Beatriz", "Daniel", "Eduardo", "Fernanda"];
 
+nomes.sort();
+
+console.log("Ordem alfabética:", nomes);
+
+nomes.reverse();
+
+console.log("Ordem inversa:", nomes);
 
 
 
@@ -327,7 +393,13 @@ console.log(resul);
 // Mostre o array de pares no console.
 // Dica: use .filter(function(numero) { return numero % 2 === 0 })
 // ------------------------------------------------------------
+let nr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
+let pares = numeros.filter(function(numero) {
+    return numero % 2 === 0;
+});
+
+console.log(pares);
 
 
 
